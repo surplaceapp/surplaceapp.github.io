@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SurPlace — Aide et support</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --fond: #ffffff;
+    --texte: #1c1c1e;
+    --secondaire: #6b6b70;
+    --trait: #e3e3e6;
+    --accent: #0a6cff;
+    --encart: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fond: #131316;
+      --texte: #f2f2f5;
+      --secondaire: #a0a0a8;
+      --trait: #2c2c31;
+      --accent: #5aa0ff;
+      --encart: #1d1d21;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--fond);
+    color: var(--texte);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 .4rem; letter-spacing: -.025em; }
+  .accroche { color: var(--secondaire); font-size: 1.05rem; margin: 0 0 2rem; }
+  h2 {
+    font-size: 1.2rem; margin: 2.6rem 0 .9rem;
+    padding-top: 1.6rem; border-top: 1px solid var(--trait);
+    letter-spacing: -.01em;
+  }
+  h3 { font-size: 1.02rem; margin: 1.7rem 0 .35rem; }
+  p, li { margin: 0 0 .9rem; }
+  ul { padding-left: 1.3rem; }
+  a { color: var(--accent); }
+  .encart {
+    background: var(--encart);
+    border: 1px solid var(--trait);
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    margin: 1.5rem 0;
+  }
+  .encart p:last-child { margin-bottom: 0; }
+  .contact { font-size: 1.05rem; }
+  footer {
+    margin-top: 3rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--trait);
+    color: var(--secondaire); font-size: .9rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>SurPlace</h1>
+<p class="accroche">Le pointage automatique du temps passé sur vos lieux. Aide, questions fréquentes et contact.</p>
+
+<div class="encart">
+  <p class="contact"><strong>Une question, un problème, une suggestion&nbsp;?</strong><br>
+  Écrivez à <a href="mailto:surplace.dev@gmail.com?subject=Support%20SurPlace">surplace.dev@gmail.com</a> — réponse sous quelques jours ouvrés.</p>
+  <p>Pour aller plus vite, précisez votre modèle d'iPhone, votre version d'iOS et la version de SurPlace (Réglages&nbsp;› Aide).</p>
+</div>
+
+<h2>Comment ça marche</h2>
+<p>Vous enregistrez vos lieux — un chantier, un client, la salle de sport, le domicile — en plaçant un repère sur la carte et en réglant un rayon de détection. SurPlace se charge du reste&nbsp;: elle constate seule votre arrivée et votre départ, et enregistre une visite avec sa durée. Vous n'avez rien à lancer ni à arrêter.</p>
+<p>Le mode Pro ajoute la facturation&nbsp;: taux horaire ou forfait par lieu, montants calculés, factures numérotées avec vos mentions légales, export PDF et CSV.</p>
+
+<h2>Questions fréquentes</h2>
+
+<h3>Pourquoi l'application demande-t-elle la localisation « Toujours »&nbsp;?</h3>
+<p>C'est ce qui permet de pointer sans y penser. Sans cette autorisation, iOS n'informe l'application de vos arrivées et de vos départs que si elle est ouverte à l'écran — il faudrait donc la lancer à chaque fois, ce qui lui retirerait tout intérêt. Votre position ne quitte jamais votre appareil&nbsp;: voir la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+
+<h3>Mes arrivées ne sont pas détectées</h3>
+<ul>
+  <li>Vérifiez que l'autorisation est bien réglée sur <strong>Toujours</strong> dans Réglages&nbsp;› Confidentialité et sécurité&nbsp;› Service de localisation&nbsp;› SurPlace, et que la <strong>position précise</strong> est activée.</li>
+  <li>Un rayon trop petit rend la détection incertaine&nbsp;: en deçà de 100&nbsp;m, la précision du GPS ne suffit pas toujours. L'application vous en avertit lors du réglage.</li>
+  <li>Le <strong>mode économie d'énergie</strong> et le mode Avion retardent ou empêchent les réveils en arrière-plan.</li>
+  <li>Les passages très courts sont ignorés volontairement, pour éviter les faux pointages. Ce seuil se règle dans Réglages&nbsp;› Seuil de détection.</li>
+  <li>iOS ne permet de surveiller que <strong>20 lieux à la fois</strong>. Au-delà, SurPlace choisit les plus pertinents (visite en cours, lieux épinglés, lieux habituels, puis les plus récents) et vous indique lesquels sont écartés dans la liste de vos lieux. Vous pouvez épingler un lieu pour qu'il reste toujours surveillé.</li>
+</ul>
+
+<h3>Une visite est fausse ou manquante</h3>
+<p>Toutes les visites sont modifiables à la main depuis le Calendrier&nbsp;: horaires, durée, note. Vous pouvez aussi en supprimer une, ou terminer une intervention en cours depuis l'écran d'accueil.</p>
+
+<h3>Combien de lieux puis-je créer&nbsp;?</h3>
+<p>Quatre dans la version gratuite. Le mode Pro les rend illimités (dans la limite des 20 lieux surveillés simultanément par iOS, évoquée plus haut). Supprimer un lieu libère aussitôt la place. Si vous quittez le mode Pro, vos lieux existants sont conservés&nbsp;: aucun n'est supprimé.</p>
+
+<h3>Comment gérer ou résilier mon abonnement&nbsp;?</h3>
+<p>L'abonnement Pro est de 9,99&nbsp;€ par mois, reconduit automatiquement, résiliable à tout moment. Il se gère depuis votre compte Apple, et non dans l'application&nbsp;: Réglages iOS&nbsp;› votre nom&nbsp;› Abonnements. Voir l'<a href="https://support.apple.com/fr-fr/HT202039" rel="noopener">aide d'Apple</a>.</p>
+
+<h3>J'ai changé de téléphone, où sont mes données&nbsp;?</h3>
+<p>SurPlace conserve tout sur votre appareil, sans serveur. Vos données suivent donc votre <strong>sauvegarde iCloud ou ordinateur</strong> lors d'un transfert vers un nouvel iPhone. En l'absence de sauvegarde, elles ne peuvent pas être récupérées&nbsp;: l'éditeur n'en détient aucune copie. Pensez à exporter vos relevés et vos factures en PDF régulièrement.</p>
+
+<h3>Comment supprimer toutes mes données&nbsp;?</h3>
+<p>Désinstallez l'application&nbsp;: iOS efface l'intégralité de ses données. L'opération est définitive.</p>
+
+<h2>Confidentialité</h2>
+<p>SurPlace fonctionne entièrement hors ligne. Aucune donnée n'est transmise à l'éditeur ni à un tiers, il n'y a ni compte, ni publicité, ni traceur. <a href="confidentialite.html">Lire la politique de confidentialité</a>.</p>
+
+<h2>Compatibilité</h2>
+<p>iPhone sous iOS&nbsp;18 ou version ultérieure.</p>
+
+<footer>
+  SurPlace — édité par Alexandre Lhuillier · <a href="confidentialite.html">Politique de confidentialité</a> · <a href="mailto:surplace.dev@gmail.com">Contact</a>
+</footer>
+
+</main>
+</body>
+</html>
