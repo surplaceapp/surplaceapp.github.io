@@ -18,8 +18,30 @@ donc aussi ce que SurPlace **ne fait pas** — elle fabrique le fichier, elle ne
 le dépose pas, n'étant pas une plateforme agréée.
 
 Pages statiques, sans dépendance ni outil de construction : aucune ressource
-externe, tout est en ligne dans le fichier. On modifie le HTML, on pousse, la
-page est à jour en une minute.
+externe, tout est en ligne dans le fichier.
+
+## Publier : par l'interface web, et les deux historiques qui en découlent
+
+**Cette copie locale n'a pas de remote**, et la machine ne porte aucune
+authentification GitHub — ni clé SSH, ni `gh`, ni jeton. Les mises en ligne
+passent donc par l'interface web : *Add file → Upload files*, en déposant les
+fichiers modifiés.
+
+Conséquence à connaître avant de brancher un remote un jour : **les deux
+historiques ont divergé**. Chaque dépôt porte ses propres commits pour le même
+travail — contenus identiques, identifiants différents. Le jour venu, partir de
+l'état de GitHub (cloner à côté, ou `fetch` puis aligner la copie locale
+dessus) ; ne pas pousser l'historique local par-dessus, il réécrirait des
+commits qui existent déjà là-bas sous un autre nom.
+
+**Ce qui déclenche la publication est un commit sur `main`**, qui lance le
+workflow *pages build and deployment*. À retenir du 17 août 2026 : pendant un
+incident GitHub, ce workflow a d'abord échoué (téléchargement de
+`jekyll-build-pages` en 429, puis 503), et sa relance est restée **deux heures
+en file d'attente sans jamais démarrer**. Ce n'est pas la relance qui a débloqué
+la situation mais un **commit neuf**, qui a créé un run indépendant : la page
+était en ligne une minute après. Si un déploiement paraît figé, ne pas
+s'acharner sur « Re-run jobs » — committer quelque chose d'utile.
 
 ## Cohérence à tenir
 
